@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="./" />
+    <meta charset="utf-8" />
+    <title>HyperMD Playground</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="./demo/style.css" />
+
+    <div id="loadSplash">
+      <!-- 文件加载 -->
+      <i id="loadingFileName"></i>
+    </div>
+
+    <div id="editor_area">
+      <textarea id="demo" style="display: none;"></textarea>
+    </div>
+
+    <!-- 使用require.js解决依赖关系 -->
+    <script src="./demo/vendor/require.js"></script>
+    <script src="./goods/patch-requirejs.js"></script>
+    <script src="./demo/requirejs_packages.js"></script>
+    <script src="./demo/index.js"></script>
+
+    <!-- 一些无用的测试材料 -->
+    <script src="./demo/index2.js"></script>
+  </body>
+</html>
