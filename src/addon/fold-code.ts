@@ -332,7 +332,7 @@ export class FoldCode implements Addon.Addon {
     let $stub = document.createElement('span')
     $stub.className = stubClass + type
     $stub.textContent = '<CODE>'
-
+    
     let marker = info.marker = cm.markText(from, to, {
       replacedWith: $stub,
     })

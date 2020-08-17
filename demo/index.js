@@ -1,4 +1,5 @@
 var is_running_demo = /\.github\.|laobubu\.net/.test(location.hostname)
+
 var demo_page_baseurl = window.location.href.replace(/[\?\#].*$/, '').replace(/\/[^\/]+$/, '/')
 var demo_page_lib_baseurl = is_running_demo ? "https://cdn.jsdelivr.net/npm/" : (demo_page_baseurl + "node_modules/")
 var demo_filename = "README.md"
@@ -118,14 +119,14 @@ require([
 
   // Preview Tex Math formula
   // @see demo/math-preview.js
-  // init_math_preview(editor)
+  init_math_preview(editor)
 
   // Watch editor and generate TOC
   // @see demo/toc.js
-  // init_toc(editor)
+  init_toc(editor)
 
   // @see demo/lab.js
-  // init_lab(editor)
+  init_lab(editor)
 }, function (err) {
   var div = document.getElementById('loadErrorSplash')
   var ul = document.getElementById('loadErrorList')

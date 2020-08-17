@@ -40,6 +40,7 @@ export type RendererFunc = (html: string, pos: Position, cm: cm_t) => HTMLElemen
  * Create HTMLElement from HTML string and do special process with HyperMD.ReadLink
  */
 export var defaultRenderer: RendererFunc = (html: string, pos: Position, cm: cm_t): HTMLElement => {
+  console.log(html)
   var tagBegin = /^<(\w+)\s*/.exec(html)
   if (!tagBegin) return null
 
